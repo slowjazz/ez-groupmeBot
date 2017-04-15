@@ -23,5 +23,8 @@
   "dependencies": {
     "dot-env": "0.0.1",
     "express": "^4.15.2"
+  },
+  "engines":{
+    "node": "6.9.1"
   }
 }
