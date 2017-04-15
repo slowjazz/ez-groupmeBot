@@ -8,7 +8,7 @@ const ACCESSTOKEN = process.env.ACCESSTOKEN;
 const BOT_ID = process.env.BOT_ID
 
 app.use(express.static(__dirname + '/public'));
-app.use(express.bodyparser());
+app.use(express.bodyParser());
 
 app.get('/', function (req, res) {
   res.sendFile('index.html');
