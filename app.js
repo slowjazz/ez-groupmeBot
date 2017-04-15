@@ -17,7 +17,16 @@ app.get('/', function(req, res) {
 
 app.post('/post', (req, res) => {
     console.log(req.body);
-    var options = {
+    likeAll(req);
+   
+});
+
+app.listen(port, function() {
+    console.log('Example app listening on port' + port);
+});
+
+function likeAll(req){
+	 var options = {
         url: 'https://api.groupme.com/v3/messages/' + req.body.group_id + '/' + req.body.id + '/like?token=' + ACCESSTOKEN,
         method: 'POST'
     }
@@ -32,8 +41,4 @@ app.post('/post', (req, res) => {
         }
 
     });
-});
-
-app.listen(port, function() {
-    console.log('Example app listening on port' + port);
-});
+}
