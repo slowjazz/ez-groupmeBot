@@ -13,7 +13,8 @@ app.get('/', function (req, res) {
   res.sendFile('index.html');
 });
 
-app.post('/', (req, res)=>{
+app.post('/post', (req, res)=>{
+	console.log(req.body);
 	request('https://api.groupme.com/v3/messages/'+req.body.group_id+'/'+ req.body.id
 		+'/like?token='+ACCESSTOKEN, (error, response, body)=>{
 			console.log("Liked message in group "+req.body.group_id)
