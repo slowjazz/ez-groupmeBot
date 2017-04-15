@@ -1,0 +1,27 @@
+{
+  "name": "ez-groupmebot",
+  "version": "1.0.0",
+  "description": "Simple groupme bot that handles callbacks and performs actions as another user",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slowjazz/ez-groupmeBot.git"
+  },
+  "keywords": [
+    "groupme",
+    "bot"
+  ],
+  "author": "kenneth li",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/slowjazz/ez-groupmeBot/issues"
+  },
+  "homepage": "https://github.com/slowjazz/ez-groupmeBot#readme",
+  "dependencies": {
+    "dot-env": "0.0.1",
+    "express": "^4.15.2"
+  }
+}
