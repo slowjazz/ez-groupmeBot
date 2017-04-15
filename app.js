@@ -8,12 +8,14 @@ const ACCESSTOKEN = process.env.ACCESSTOKEN;
 const BOT_ID = process.env.BOT_ID
 
 app.use(express.static(__dirname + '/public'));
+app.use(express.bodyparser());
 
 app.get('/', function (req, res) {
   res.sendFile('index.html');
 });
 
 app.post('/post', (req, res)=>{
+	console.log(req.jsonBody);
 	console.log(req.body);
 	request('https://api.groupme.com/v3/messages/'+req.body.group_id+'/'+ req.body.id
 		+'/like?token='+ACCESSTOKEN, (error, response, body)=>{
